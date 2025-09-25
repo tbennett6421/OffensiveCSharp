@@ -26,6 +26,7 @@ namespace HookDetector
             "NtResumeThread",
             "NtSetContextThread",
             "NtSetInformationProcess",
+            "NtSuspendProcess",
             "NtSuspendThread",
             "NtUnloadDriver",
             "NtWriteVirtualMemory"
@@ -135,4 +136,5 @@ namespace HookDetector
         [DllImport("kernel32.dll", SetLastError = true, CallingConvention = CallingConvention.Winapi)]
         public static extern bool IsWow64Process(IntPtr hProcess, out bool Wow64Process);
     }
+
 }
